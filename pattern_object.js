@@ -10,18 +10,18 @@ function Person(_firstName, _lastName, _birthday, _locality) {
  
         //it does not seem like a good solution, code of repetition! 
         //but if I use the length of a string, returned the string length
-        if(Array.isArray(_firstName)) {
-            for(var i = 0; i < _firstName.length; i++) {
-                _out += "Name: "+ _firstName[i]+" "+_lastName[i];
-                _out += " Birthday: "+ ((_birthday[i]) ? _birthday[i] : "uninformed");
-                _out += " Locality: "+ ((_locality[i]) ? _locality[i] : "uninformed");
+        if(Array.isArray(this._firstName)) {
+            for(var i = 0; i < this._firstName.length; i++) {
+                _out += "Name: "+ this._firstName[i]+" "+ this._lastName[i];
+                _out += " Birthday: "+ ((this._birthday[i]) ? this._birthday[i] : "uninformed");
+                _out += " Locality: "+ ((this._locality[i]) ? this._locality[i] : "uninformed");
                 _out += "\n";
             }
         }
         else {
-             _out = "Name: "+ _firstName+" "+_lastName;
-             _out += " Birthday: "+ ((_birthday) ? _birthday : "uninformed");
-             _out += " Locality: "+ ((_locality) ? _locality : "uninformed");
+             _out = "Name: "+ this._firstName+" "+_lastName;
+             _out += " Birthday: "+ ((this._birthday) ? this._birthday : "uninformed");
+             _out += " Locality: "+ ((this._locality) ? this._locality : "uninformed");
         }
         console.log(_out);
     } 
